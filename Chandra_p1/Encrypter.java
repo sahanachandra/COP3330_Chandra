@@ -26,12 +26,20 @@ public class Encrypter {
     }
 
     private int[] encryptProcess(int[] userNumInt) {
-        int tempOnes = userNumInt[3], tempTens = userNumInt[2], tempHundreds = userNumInt[1],
-                tempThousands = userNumInt[0];
-        tempOnes = (tempOnes + 7) % 10;
-        tempTens = (tempTens + 7) % 10;
-        tempHundreds = (tempHundreds + 7) % 10;
-        tempThousands = (tempThousands + 7) % 10;
-        return new int[]{tempTens, tempOnes, tempThousands, tempHundreds};
+        int ones = userNumInt[3], tens = userNumInt[2], hundreds = userNumInt[1],
+        thousands = userNumInt[0];
+        ones = (ones + 7) % 10;
+        tens = (tens + 7) % 10;
+        hundreds = (hundreds + 7) % 10;
+        thousands = (thousands + 7) % 10;
+        int[] casted={tens, ones, thousands, hundreds};
+        String strArray[]= new String[casted.length];
+        for(int a = 0; a < casted.length; a++){
+          strArray[a]=String.valueOf(casted[a]);
+        }
+        System.out.print(Arrays.toString(strArray).replaceAll("\\[|\\]|,|\\s", ""));
+
+        return casted;
+
     }
 }
