@@ -26,13 +26,19 @@ public class Decrypter {
 
   
     private int[] decryptString(int[] userNumInt) {
-        int tempOnes = userNumInt[3], tempTens = userNumInt[2], tempHundreds = userNumInt[1],
-                tempThousands = userNumInt[0];
-        tempOnes = invertMod(tempOnes) - 7;
-        tempTens = invertMod(tempTens) - 7;
-        tempHundreds = invertMod(tempHundreds) - 7;
-        tempThousands = invertMod(tempThousands) - 7;
-        return new int[]{tempTens, tempOnes, tempThousands, tempHundreds};
+        int ones = userNumInt[3], tens = userNumInt[2], hundreds = userNumInt[1],thousands = userNumInt[0];
+        ones = invertMod(ones) - 7;
+        tens = invertMod(tens) - 7;
+        hundreds = invertMod(hundreds) - 7;
+        thousands = invertMod(thousands) - 7;
+        int[] casted={tens, ones, thousands, hundreds};
+        String strArray[]= new String[casted.length];
+        for(int a = 0; a < casted.length; a++){
+          strArray[a]=String.valueOf(casted[a]);
+        }
+        System.out.print(Arrays.toString(strArray).replaceAll("\\[|\\]|,|\\s", ""));
+
+        return casted;
     }
 
   
