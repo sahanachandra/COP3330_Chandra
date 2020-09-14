@@ -1,3 +1,4 @@
+// library 
 import java.util.Scanner;
 import java.util.Arrays;
 
@@ -18,12 +19,13 @@ public class Main {
         userNum = getNum();
         userChoice = getChoice();
         if (userChoice == 1) {
-            userNum = encryptNum.encrypt(userNum);
-            System.out.println("The number encrypted is: " + userNum);
+           encryptNum.encrypt(userNum);
+           System.out.println (" is "+ userNum + " encrypted ");
+            
         }
         if (userChoice == 2) {
-            userNum = decryptNum.decrypt(userNum);
-            System.out.println("The number decrypted is: " + userNum);
+            decryptNum.decrypt(userNum);
+            System.out.println (" is "+ userNum + " decrypted ");
         }
         else if (userChoice != 2 && userChoice != 1 ){
             System.out.println("Please restart and choose a legitimate choice");
