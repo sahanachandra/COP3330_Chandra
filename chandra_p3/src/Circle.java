@@ -1,15 +1,17 @@
 public class Circle extends Shape2D {
 
-    public Circle(double radius){
-        this.radius = radius;
+   private double radius;
+    public Circle(double radius) {
+        super();
+        this.radius= radius;
     }
     @Override
-    String getName() {
+   public String getName() {
         return "circle";
     }
 
     @Override
-    double getArea() {
+    public double getArea() {
          return 3.141592653589793*radius*radius;
     }
 
