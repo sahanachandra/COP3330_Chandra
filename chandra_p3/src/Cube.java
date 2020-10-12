@@ -1,21 +1,23 @@
 public class Cube extends Shape3D{
 
-    public Cube(double side){
+    private double side;
+    public Cube(double side) {
+        super();
         this.side = side;
     }
 
     @Override
-    String getName() {
+    public String getName() {
         return "cube";
     }
 
     @Override
-    double getArea() {
+    public double getArea() {
         return 6 * side * side;
     }
 
     @Override
-    double getVolume() {
+    public double getVolume() {
         return side * side * side;
     }
 }
