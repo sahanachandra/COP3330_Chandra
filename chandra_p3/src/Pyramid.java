@@ -1,7 +1,7 @@
 public class Pyramid extends Shape3D {
-    private double length;
-    private double width;
-    private double height;
+    private double leng;
+    private double wid;
+    private double hei;
     public Pyramid(double length, double width, double height) {
         super();
         this.leng = length;
