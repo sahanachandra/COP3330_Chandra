@@ -51,10 +51,10 @@ public class TaskItem {
             return false;
         }
         return true;
-    }    //Verifies the date exists.
+    }    
     protected static boolean FormulaHandler(String input) {
-        if (input.charAt(4) != '-' || input.charAt(7) != '-') return false;   //Checks for dashes.
-        return input.length() == 10;                           //Checks for length issues.
+        if (input.charAt(4) != '-' || input.charAt(7) != '-') return false;   
+        return input.length() == 10;                           
     }    //Verifies the date follows the formula.
     public static boolean TitleIsValid(String title) {
         if(title.length() == 0){
