@@ -84,7 +84,7 @@ public class ContactList {
         return true;
     }
     public static String AmassListInfo() {
-        String ListInfo = "";                                           //Empty opening statement.
+        String ListInfo = "";                                           
         for(int index = 0; index < contacts.size(); index++){
             ListInfo += contacts.get(index).AmassContactInfo();
         }
