@@ -34,7 +34,8 @@ public class TaskItem {
             output = 10 * output + digit;
         }
         return output;
-    }    //Isolates a section of the input string and converts it to its integer value.
+        
+    }    
     protected static boolean CalendarHandler(String[] dates) {
         int year, month, day;
         year        = StringToInt(dates[0]);
