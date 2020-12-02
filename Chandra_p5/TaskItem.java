@@ -15,7 +15,7 @@ public class TaskItem {
             return false;
         }
         if (!FormulaHandler(dateIN)) {
-            System.out.print("\nYour date does not adhere to the proper formula.\n");
+            System.out.print("\nYour date is incoreect.\n");
             return false;
         }
         String dates[]  = dateIN.split("-",0);
@@ -25,7 +25,7 @@ public class TaskItem {
         try {
             Integer.parseInt(String);
         } catch (NumberFormatException e) {
-            System.out.println("\nYour input contains non-integer characters.\n");
+            System.out.println("\nYour input contains non-integer.\n");
             return 0;
         }
         int output = 0, digit;
