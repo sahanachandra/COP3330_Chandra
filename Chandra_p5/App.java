@@ -51,7 +51,7 @@ public abstract class App {
     abstract int specifyItem(String condition, String action, int length);
     static void print(String ToPrint){
         System.out.print(ToPrint);
-    }   //Quality of life function.
+    }   
 
     int getSelection(String nextLine, int size) {
         int selection;
