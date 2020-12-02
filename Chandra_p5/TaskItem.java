@@ -56,7 +56,8 @@ public class TaskItem {
     protected static boolean FormulaHandler(String input) {
         if (input.charAt(4) != '-' || input.charAt(7) != '-') return false;   
         return input.length() == 10;                           
-    }    //Verifies the date follows the formula.
+    }   
+    
     public static boolean TitleIsValid(String title) {
         if(title.length() == 0){
             System.out.print("\nYour title needs at least one character.\n");
