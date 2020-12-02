@@ -5,7 +5,7 @@ public abstract class App {
         String choice = "0";
         Scanner in = new Scanner(System.in);
         while(!choice.equals("3")) {
-            System.out.print("\nSelect Your Application\n" +
+            System.out.print("\nSelect An Application\n" +
                     "---------------------\n\n" +
                     "1) Task List\n2) Contact List\n3) Exit Program\n\n> ");
             choice = in.nextLine();
@@ -22,6 +22,7 @@ public abstract class App {
         }
     }
     Scanner in = new Scanner(System.in);
+
     void runMenu(){
         String choice = "0";
         while(!choice.equals("3")) {
@@ -46,9 +47,12 @@ public abstract class App {
     abstract void createList();
     abstract void ManageList();
     abstract boolean loadList();
+    abstract void editItem(int index);
+    abstract int specifyItem(String condition, String action, int length);
     static void print(String ToPrint){
         System.out.print(ToPrint);
-    }
+    }   //Quality of life function.
+
     int getSelection(String nextLine, int size) {
         int selection;
         try {
@@ -59,9 +63,10 @@ public abstract class App {
             }
         } catch (NumberFormatException e) {
             selection = 0;
-            print("\nPlease enter a number\n");
+            print("\n Please enter a number.\n");
         }
         return selection;
+    
     }
-    abstract int specifyItem(String condition, String action, int length);
+
 }
